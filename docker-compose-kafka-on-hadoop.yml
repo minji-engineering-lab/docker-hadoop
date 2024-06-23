@@ -30,6 +30,7 @@ services:
 
   resourcemanager:
     image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
+    platform: linux/amd64
     container_name: resourcemanager
     restart: always
     environment:
@@ -39,6 +40,7 @@ services:
 
   nodemanager1:
     image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
+    platform: linux/amd64
     container_name: nodemanager
     restart: always
     environment:
@@ -48,6 +50,7 @@ services:
 
   historyserver:
     image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+    platform: linux/amd64 
     container_name: historyserver
     restart: always
     environment:
@@ -60,6 +63,7 @@ services:
   zookeeper:
     image: wurstmeister/zookeeper
     container_name: zookeeper
+    platform: linux/amd64
     ports:
       - "2181:2181"
     environment:
@@ -68,6 +72,7 @@ services:
 
   kafka:
     image: confluentinc/cp-kafka:6.0.1
+    platform: linux/amd64
     container_name: kafka
     ports:
       - "9092:9092"
