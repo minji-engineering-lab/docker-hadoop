@@ -82,7 +82,7 @@ services:
       - KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
     volumes:
-      - /var/lib/kafka/data  # Kafka 데이터 저장소를 호스트에 마운트하거나 볼륨으로 지정해야 합니다.
+      - /var/lib/kafka/data  
 
 volumes:
   hadoop_namenode:
